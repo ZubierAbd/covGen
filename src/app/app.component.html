@@ -47,7 +47,11 @@
 
 
 
-
+<div class="ml-50" *ngIf="showResponse && !showSpinner">
+  <div>
+    <button mat-raised-button color="primary" (click)="reset()">RESET</button>
+  </div>
+</div>
 <div class="finalResponse" *ngIf="showResponse && !showSpinner">
   <div>
     <p>{{firstLine}}</p>

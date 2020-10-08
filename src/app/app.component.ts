@@ -55,4 +55,17 @@ export class AppComponent {
       this.showSpinner = false;
     }, 2000)
   }
+
+  reset() {
+    this.jobTitle = ''
+    this.bulletPoint1 = ''
+    this.bulletPoint2 = ''
+    this.bulletPoint3 = ''
+    this.showSpinner = true;
+    setTimeout(() => {
+      this.showSpinner = false
+      this.showResponse = false
+    }, 1000)
+
+  }
 }

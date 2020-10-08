@@ -44,6 +44,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 66vw;
 }
 
+.finalResponse p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 .ml-50{
 margin-left: 45vw;
 }

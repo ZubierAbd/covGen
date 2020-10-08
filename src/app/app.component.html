@@ -16,6 +16,12 @@
 <div *ngIf="!showResponse" class="form">
   <div>
     <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput type="text" [(ngModel)]="name">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
       <mat-label>Enter job title</mat-label>
       <input matInput type="text" [(ngModel)]="jobTitle">
     </mat-form-field>

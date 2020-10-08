@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #333;
+    color: #ffffff;
+    margin: 2em;
+    display: flex;
+    justify-content: center;
+}
+
+header{
+text-align: center;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.form{
+    color: #777777;
+    display: inline-block;
+
+}
+
+input{
+    min-width: 20vw;
+    padding: 5px;
+    margin-top: 5px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

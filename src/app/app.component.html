@@ -7,7 +7,13 @@
   </p>
 
 </header>
-<div class="form">
+<!--Spinner-->
+<div class="ml-50" *ngIf="showResponse && showSpinner">
+  <mat-spinner></mat-spinner>
+</div>
+
+
+<div *ngIf="!showResponse" class="form">
   <div>
     <mat-form-field>
       <mat-label>Enter job title</mat-label>
@@ -42,7 +48,7 @@
 
 
 
-<div *ngIf="showResponse">
+<div class="finalResponse" *ngIf="showResponse && !showSpinner">
   <div>
     <p>{{firstLine}}</p>
   </div>
@@ -50,12 +56,15 @@
   <div>
     {{firstParagraph}}
   </div>
+  <br>
   <div>
     {{secondPara}}
   </div>
+  <br>
   <div>
     {{thirdPara}}
   </div>
+  <br>
   <ul>
     <li>
       {{bulletPoint1}}
@@ -67,12 +76,15 @@
       {{bulletPoint3}}
     </li>
   </ul>
+  <br>
   <div>
     <p>{{fourthPara}}</p>
   </div>
+  <br>
   <div>
     <p>{{fifthPara}}</p>
   </div>
+  <br>
   <div>
     <p>{{finalPara}}</p>
   </div>
@@ -80,7 +92,4 @@
   <p>
     {{name}}
   </p>
-  <div>
-
-  </div>
 </div>

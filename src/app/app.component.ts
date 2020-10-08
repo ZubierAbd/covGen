@@ -44,6 +44,15 @@ export class AppComponent {
       this.bulletPoint3 = 'Familiarity with debugging and deploying enterprise level scalable web applications'
     }
 
+    this.firstParagraph = `This letter is to express my interest in your posting on LinkedIn.com for the position of an experienced ${this.jobTitle} .  With a Master’s degree in Electrical and Computer Engineering, as well as over three years hands-on experience working in the Canadian tech space, 
+    I am confident I will be an asset to the organization. `
+    this.bulletPoint1 = this.bulletPoint1
+    this.bulletPoint2 = this.bulletPoint2
+    this.bulletPoint3 = this.bulletPoint3
+    this.showSpinner = true;
     this.showResponse = true;
+    setTimeout(() => {
+      this.showSpinner = false;
+    }, 2000)
   }
 }

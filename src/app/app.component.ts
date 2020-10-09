@@ -7,19 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'covGen';
-
   public response: string = ''
   public showResponse: boolean = false;
   public showSpinner = false;
+
+  /**Variables for the ngModel to work on */
   public jobTitle: string = ''
   public date: Date = new Date();
   public bulletPoint1 = ``
   public bulletPoint2 = ``
   public bulletPoint3 = ``
   public mainString = ``;
+  public yearsOfExp = '';
+  public addressee = 'Hiring Manager';
 
   public firstLine = `Dear Hiring Manager,`
-  public firstParagraph = `This letter is to express my interest in your posting on LinkedIn.com for the position of an experienced ${this.jobTitle} .  With a Master’s degree in Electrical and Computer Engineering, as well as over three years hands-on experience working in the Canadian tech space, 
+  public firstParagraph = `This letter is to express my interest in your posting on LinkedIn.com for the position of an experienced ${this.jobTitle} .  With a Master’s degree in Electrical and Computer Engineering, as well as over ${this.yearsOfExp} years hands-on experience working in the Canadian tech space, 
   I am confident I will be an asset to your organization. `
   public secondPara = `I am someone who continually seeks challenge and greatly enjoy learning new things and working on projects which require me to work outside my comfort zone. I enjoy learning new languages and frameworks in the web development sphere, as over the past two years in the field, I have worked with a number of technologies and am equally comfortable working in the front end as well as the back. At my current workplace (Big 5 Bank in Toronto – Capital Markets), I have worked to redesign and redevelop the existing customer administration modules of our Online Banking for Business platform, adhering to web accessibility guidelines and industry best practices. Aside from that, I have also worked on projects related to mitigating security vulnerabilities for the online banking platform as well as fraud mitigation through integrating IBM Trusteer Pinpoint API into the current product flow. `
   public thirdPara = `Your listed requirements match my background and skill.`
@@ -46,12 +49,16 @@ export class AppComponent {
     if (this.name == '') {
       this.name = 'Zubier Abdullah'
     }
+    if (this.yearsOfExp == '') {
+      this.yearsOfExp = this.numberWordMap['3']
+    }
 
-    this.firstParagraph = `This letter is to express my interest in your posting on LinkedIn.com for the position of an experienced ${this.jobTitle} .  With a Master’s degree in Electrical and Computer Engineering, as well as over three years hands-on experience working in the Canadian tech space, 
+    this.firstParagraph = `This letter is to express my interest in your posting on LinkedIn.com for the position of an experienced ${this.jobTitle} .  With a Master’s degree in Electrical and Computer Engineering, as well as over ${this.numberWordMap[this.yearsOfExp]} years hands-on experience working in the Canadian tech space, 
     I am confident I will be an asset to the organization. `
     this.bulletPoint1 = this.bulletPoint1
     this.bulletPoint2 = this.bulletPoint2
     this.bulletPoint3 = this.bulletPoint3
+    this.yearsOfExp = this.numberWordMap[this.yearsOfExp]
     this.name = this.name;
     this.showSpinner = true;
     this.showResponse = true;
@@ -65,11 +72,29 @@ export class AppComponent {
     this.bulletPoint1 = ''
     this.bulletPoint2 = ''
     this.bulletPoint3 = ''
+    this.name = ''
+    this.yearsOfExp = ''
     this.showSpinner = true;
     setTimeout(() => {
       this.showSpinner = false
       this.showResponse = false
     }, 1000)
 
+  }
+
+  numberWordMap = {
+    "1": "one",
+    "2": "two",
+    "3": "three",
+    "4": "four",
+    "5": "five",
+    "6": "six",
+    "7": "seven",
+    "8": "eight",
+    "9": "nine",
+    "10": "a decade",
+    "11": "eleven",
+    "12": "twelve",
+    "13": "thirteen"
   }
 }

@@ -31,6 +31,10 @@
       <mat-label>Enter job title</mat-label>
       <input matInput type="text" [(ngModel)]="jobTitle">
     </mat-form-field>
+    <mat-form-field>
+      <mat-label>Company name</mat-label>
+      <input matInput type="text" [(ngModel)]="companyName">
+    </mat-form-field>
   </div>
 
   <div>
@@ -53,7 +57,22 @@
     </mat-form-field>
   </div>
   <div>
-    <button type="submit" mat-raised-button color="primary" (click)="generateCoverLetter()">Generate</button>
+    <span>
+      <mat-form-field>
+        <mat-label>email</mat-label>
+        <input matInput type="text" [(ngModel)]="email">
+      </mat-form-field>
+    </span>
+    <span>
+      <mat-form-field>
+        <mat-label>phone number</mat-label>
+        <input matInput type="text" [(ngModel)]="phoneNo">
+      </mat-form-field>
+    </span>
+  </div>
+  <div>
+    <button id="generate" type="submit" mat-raised-button color="primary"
+      (click)="generateCoverLetter()">Generate</button>
   </div>
 </div>
 

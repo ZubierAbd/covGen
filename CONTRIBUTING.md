@@ -14,10 +14,11 @@ I cannot guarantee that it will help you with getting a job but I can guarantee 
 
 From the user we are gathering the following user inputs (for now - this might change later)
 
-*name
-*email
-*phone number
-*bullet point 1 (this can be from job description or you can use any you want)
-*bullet point 2 (same as above)
-*bullet point 3 
-*years of experience 
+* name
+* email
+* phone number
+* bullet point 1 (this can be from job description or you can use any you want)
+* bullet point 2 (same as above)
+* bullet point 3 
+* years of experience
+* company name 
